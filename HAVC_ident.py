@@ -297,7 +297,7 @@ def HP_PV_label(Elec_timeSeries):
     ## whcih features you want to use? for now months 6 and 12 are prefered
     Month_start=6
     Month_end=12
-    x = test_data_cleaned.resample('M').mean()/test_data_cleaned.resample('M').max()
+    x = Elec_timeSeries.resample('M').mean()/Elec_timeSeries.resample('M').max()
     predictions = classifier.predict(x[Month_start:Month_end].transpose())
     return predictions    
 
