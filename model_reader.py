@@ -1,4 +1,6 @@
 import pickle, pandas
+from sklearn.ensemble import HistGradientBoostingClassifier
+
 # Load the model from the file
 with open('HVAC_ident_model.pkl', 'rb') as file:
     loaded_model = pickle.load(file) 
